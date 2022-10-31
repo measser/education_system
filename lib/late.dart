@@ -24,7 +24,7 @@ class LateScreen extends StatelessWidget {
           ),
           centerTitle: true,
           bottom:PreferredSize(
-            preferredSize: Size(double.infinity,80),
+            preferredSize: const Size(double.infinity,80),
             child: Container(
               height: 65,
               decoration: const BoxDecoration(
@@ -32,7 +32,7 @@ class LateScreen extends StatelessWidget {
                 borderRadius: BorderRadius.vertical(
                   top: Radius.circular(25),
                 )),
-              child: TabBar(
+              child: const TabBar(
 
                 automaticIndicatorColorAdjustment: false,
                 indicatorColor: AppColors.zzz,
@@ -66,18 +66,18 @@ class LateScreen extends StatelessWidget {
           child: TabBarView(
             children: <Widget>[
               Column(
-                children: [
-                  Text('dsfdsfdsfdsfdfdsf'),
+                children: const [
+                  Text('first tab body'),
                 ],
               ),
               Column(
-                children: [
-                  Text('dsfdsfdsfdsfdfdsf'),
+                children: const [
+                  Text('second tab body'),
                 ],
               ),
               Column(
-                children: [
-                  Text('dsfdsfdsfdsfdfdsf'),
+                children: const [
+                  Text('third tab body'),
                 ],
               ),
             ],
