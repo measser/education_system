@@ -65,11 +65,26 @@ class LateScreen extends StatelessWidget {
           child: TabBarView(
             children: <Widget>[
               Column(
-                children: const [
-                  Text(
-                    'We use English in this app بسام المحترم مصمم التطبيق',
-                    style: TextStyle(
-                      fontSize: 20.0,
+                children:  [
+                  Container(
+                    height: 80,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(15),
+                      color: Colors.grey
+                    ),
+                    child: Row(
+                      children: [
+                        Column(
+                          children: const[
+                            Text(
+                              ' بسام المحترم مصمم التطبيق',
+                              style: TextStyle(
+                                fontSize: 18.0,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ],
                     ),
                   ),
                 ],
