@@ -55,7 +55,7 @@ class LateScreen extends StatelessWidget {
             style: TextStyle(
               color: Colors.white,
             ),
-          ),
+          ),//
         ),
         body: Container(
           decoration: const BoxDecoration(
