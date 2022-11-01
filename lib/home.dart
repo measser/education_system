@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:hadana/colors.dart';
-import 'package:hadana/componants.dart';
-import 'package:hadana/hadana.dart';
-import 'package:hadana/homework.dart';
+
+import 'colors.dart';
+import 'componants.dart';
+import 'hadana.dart';
+import 'homework.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);

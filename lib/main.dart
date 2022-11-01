@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:hadana/late.dart';
 
 import 'colors.dart';
+import 'late.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,13 +16,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       theme: ThemeData(
         fontFamily: 'Poppins',
-        listTileTheme:const ListTileThemeData(
-          textColor: Colors.black,
-          iconColor: Colors.black
-        ),
-        iconTheme:const IconThemeData(
-          color: Colors.black
-        ),
+        listTileTheme: const ListTileThemeData(
+            textColor: Colors.black, iconColor: Colors.black),
+        iconTheme: const IconThemeData(color: Colors.black),
         primarySwatch: AppColors.primarySwatch,
       ),
       home: const LateScreen(),
@@ -30,5 +26,3 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-
-
