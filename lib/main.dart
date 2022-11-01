@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:hadana/hadana.dart';
-import 'package:hadana/home.dart';
 import 'package:hadana/late.dart';
 
 import 'colors.dart';
@@ -17,6 +15,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(
+        fontFamily: 'Poppins',
         listTileTheme:const ListTileThemeData(
           textColor: Colors.black,
           iconColor: Colors.black

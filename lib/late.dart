@@ -54,7 +54,7 @@ class LateScreen extends StatelessWidget {
             style: TextStyle(
               color: Colors.white,
             ),
-          ),//
+          ), //
         ),
         body: Container(
           decoration: const BoxDecoration(
@@ -66,7 +66,12 @@ class LateScreen extends StatelessWidget {
             children: <Widget>[
               Column(
                 children: const [
-                  Text('first tab body'),
+                  Text(
+                    'We use English in this app بسام المحترم مصمم التطبيق',
+                    style: TextStyle(
+                      fontSize: 20.0,
+                    ),
+                  ),
                 ],
               ),
               Column(
