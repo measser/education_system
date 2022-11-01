@@ -23,17 +23,16 @@ class LateScreen extends StatelessWidget {
             statusBarColor: Colors.transparent,
           ),
           centerTitle: true,
-          bottom:PreferredSize(
-            preferredSize: Size(double.infinity,80),
+          bottom: PreferredSize(
+            preferredSize: const Size(double.infinity, 80),
             child: Container(
               height: 65,
               decoration: const BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.vertical(
-                  top: Radius.circular(25),
-                )),
-              child: TabBar(
-
+                  color: Colors.white,
+                  borderRadius: BorderRadius.vertical(
+                    top: Radius.circular(25),
+                  )),
+              child: const TabBar(
                 automaticIndicatorColorAdjustment: false,
                 indicatorColor: AppColors.zzz,
                 tabs: <Widget>[
@@ -49,7 +48,7 @@ class LateScreen extends StatelessWidget {
                 ],
               ),
             ),
-          ) ,
+          ),
           title: const Text(
             'الإستئذانات',
             style: TextStyle(
@@ -66,24 +65,24 @@ class LateScreen extends StatelessWidget {
           child: TabBarView(
             children: <Widget>[
               Column(
-                children: [
-                  Text('dsfdsfdsfdsfdfdsf'),
+                children: const [
+                  Text('first tab body'),
                 ],
               ),
               Column(
-                children: [
-                  Text('dsfdsfdsfdsfdfdsf'),
+                children: const [
+                  Text('second tab body'),
                 ],
               ),
               Column(
-                children: [
-                  Text('dsfdsfdsfdsfdfdsf'),
+                children: const [
+                  Text('third tab body'),
                 ],
               ),
             ],
           ),
-          ),
         ),
+      ),
     );
   }
 }
