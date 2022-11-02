@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
-import 'colors.dart';
-import 'componants.dart';
-import 'hadana.dart';
+import '../../app.dart';
+import '../../colors.dart';
+import '../../componants.dart';
 import 'homework.dart';
+import 'login_screen.dart';
+import 'permissions_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -18,6 +21,9 @@ class HomeScreen extends StatelessWidget {
         ),
         preferredSize: Size(double.infinity, kToolbarHeight),
       ),
+
+
+
       drawer: drawerAll(),
       body: Column(
         children: [
@@ -30,15 +36,15 @@ class HomeScreen extends StatelessWidget {
                 ),
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
-                  children: const [
+                  children:  [
                     Text(
-                      'Hi',
-                      style: TextStyle(
+                      AppLocalizations.of(context).hi,
+                      style: const TextStyle(
                           fontSize: 22,
-                          fontWeight: FontWeight.bold,
+                          fontWeight: FontWeight.w500,
                           color: Colors.white),
                     ),
-                    Text(
+                    const Text(
                       'Measser Hussein',
                       style: TextStyle(
                           fontSize: 20,
@@ -75,16 +81,18 @@ class HomeScreen extends StatelessWidget {
                           children: [
                             Activities(
                               color: AppColors.teal,
-                              text: 'Home Work',
+                              text: translation(context).homework,
                               nest: () {
-                                navegateTo(context, const HomeWorkScreen());
+                                navigateTo(context, const HomeWorkScreen());
                               },
                             ),
                             const Spacer(),
                             Activities(
                               color: Colors.indigoAccent,
-                              text: 'Home Work',
-                              nest: () {},
+                              text: translation(context).permissions,
+                              nest: () {
+                                navigateTo(context, const PermissionsScreen());
+                              },
                             ),
                           ],
                         ),
@@ -97,7 +105,7 @@ class HomeScreen extends StatelessWidget {
                               color: AppColors.purple,
                               text: 'Home Work',
                               nest: () {
-                                navegateTo(context, const LoginScreen());
+                                navigateTo(context, const LoginScreen());
                               },
                             ),
                             const Spacer(),
@@ -161,7 +169,7 @@ class DefaultAppBar extends StatelessWidget {
     return AppBar(
       actions: [
         IconButton(
-            onPressed: onPressed, icon:  Icon(icon ?? Icons.arrow_forward_ios_rounded ))
+            onPressed: onPressed, icon:  Icon(icon ?? Icons.arrow_forward_ios_rounded,color: Colors.white, ))
       ],
       backgroundColor: backgroundColor ?? Colors.lightGreen,
       elevation: 0.0,

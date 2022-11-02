@@ -1,17 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-
-void navegateTo(context, Widget) =>
-    Navigator.push(
-      context,
-      MaterialPageRoute(
-        builder: (context) => Widget,
-      ),
-    );
-
-
-Widget DefaultFormField({
+Widget DefaultFormFieldd({
   @required TextEditingController? controller,
   @required TextInputType? type,
   ValueChanged<String>? onSubmit,
@@ -59,12 +49,9 @@ Widget DefaultFormField({
           labelStyle:
           TextStyle(color: labelTextColor, fontWeight: FontWeight.bold),
           hintText: hint,
-          hintStyle: TextStyle(
-            color: Colors.red,
-          ),
           prefixIcon: Icon(
             prefix,
-            color: Colors.red,
+            color: Colors.lightBlue,
           ),
           suffixIcon: suffix != null
               ? IconButton(
@@ -79,6 +66,13 @@ Widget DefaultFormField({
       ),
     );
 
+void navigateTo(context, widget) =>
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => widget,
+      ),
+    );
 
 Widget DefaultButton({double width = double.infinity,
   Color background = Colors.blue,

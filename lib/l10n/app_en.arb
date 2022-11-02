@@ -1,3 +1,16 @@
 {
-  "doctor_masr": "Doctor Masr"
+  "permissions": "Permissions",
+  "waiting" : "In pending",
+  "approved":"Approved",
+  "rejected":"Rejected",
+  "hi":"Hi",
+  "homework":"Homework",
+  "r_homework":"Required Homework",
+  "done":"Resolved",
+  "not_done":"Not resolved",
+  "login" : "LOGIN",
+    "email" : "Email",
+    "password" : "Password",
+    "forget_password" : "Forget Password?"
+
 }
