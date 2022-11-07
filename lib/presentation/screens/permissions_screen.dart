@@ -50,7 +50,6 @@ class PermissionsScreen extends StatelessWidget {
                 tabs: <Widget>[
                   Tab(
                     text: AppLocalizations.of(context).waiting,
-
                     // child: Text(
                     //   'في انتظار الموافقة',
                     //   style: TextStyle(fontSize: 14,fontWeight: FontWeight.bold),

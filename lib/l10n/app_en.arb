@@ -11,6 +11,7 @@
   "login" : "LOGIN",
     "email" : "Email",
     "password" : "Password",
-    "forget_password" : "Forget Password?"
+    "forget_password" : "Forget Password?",
+    "report" : "Reports"
 
 }

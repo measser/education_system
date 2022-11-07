@@ -5,8 +5,8 @@ import '../../app.dart';
 import '../../colors.dart';
 import '../../componants.dart';
 import 'homework.dart';
-import 'login_screen.dart';
 import 'permissions_screen.dart';
+import 'reports.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -103,9 +103,9 @@ class HomeScreen extends StatelessWidget {
                           children: [
                             Activities(
                               color: AppColors.purple,
-                              text: 'Home Work',
+                              text: translation(context).report,
                               nest: () {
-                                navigateTo(context, const LoginScreen());
+                                navigateTo(context, const ReportsScreen());
                               },
                             ),
                             const Spacer(),
