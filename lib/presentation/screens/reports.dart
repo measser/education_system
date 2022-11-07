@@ -73,7 +73,7 @@ class ReportsScreen extends StatelessWidget {
           ),
           title: const Text(
             'التقارير',
-            style: const TextStyle(
+            style:  TextStyle(
               color: Colors.white,
             ),
           ), //
@@ -118,7 +118,7 @@ Widget listBuild()=>ListView.builder(
             ),
             child: Column(
               children: [
-                SizedBox(height: 15,),
+               const SizedBox(height: 15,),
                 Row(
                   children:const [
                     Text(
