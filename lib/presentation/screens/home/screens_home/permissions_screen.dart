@@ -25,53 +25,45 @@ class PermissionsScreen extends StatelessWidget {
               icon: const Icon(Icons.arrow_forward_ios_rounded),
             ),
           ],
-          toolbarHeight: 80,
-          elevation: 0.0,
-          systemOverlayStyle: const SystemUiOverlayStyle(
-            statusBarIconBrightness: Brightness.light,
-            statusBarColor: Colors.transparent,
-          ),
           centerTitle: true,
-          bottom: PreferredSize(
-            preferredSize: const Size(double.infinity, 80),
-            child: Container(
-              height: 65,
-              decoration: const BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.vertical(
-                    top: Radius.circular(25),
-                  )),
-              child: TabBar(
-                labelPadding: const EdgeInsets.all(1),
-                labelStyle:const TextStyle(
-                    fontSize: 20
-                ),
-                automaticIndicatorColorAdjustment: false,
-                indicatorColor: AppColors.zzz,
-                tabs: <Widget>[
-                  Tab(
-                    text: AppLocalizations.of(context).waiting,
-                    // child: Text(
-                    //   'في انتظار الموافقة',
-                    //   style: TextStyle(fontSize: 14,fontWeight: FontWeight.bold),
-                    // ),
-                  ),
-                  Tab(
-                    text: AppLocalizations.of(context).approved,
-                  ),
-                  Tab(
-                    text: AppLocalizations.of(context).rejected,
-                  ),
-                ],
-              ),
-            ),
-          ),
           title: Text(
             translation(context).permissions,
-            style: const TextStyle(
-              color: Colors.white,
-            ),
-          ), //
+          ),
+          bottom:  PreferredSize(
+              child:  Container(
+                height: 60,
+                width: double.infinity,
+                decoration:const BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.only(
+                      topRight: Radius.circular(20),
+                      topLeft: Radius.circular(20),
+                    )
+                ),
+                child: Center(
+                  child: TabBar(
+                      labelStyle:const TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold
+                      ),
+                      isScrollable: true,
+                      automaticIndicatorColorAdjustment: false,
+                      unselectedLabelColor: Colors.grey,
+                      indicatorColor: AppColors.zzz,
+                      tabs: [
+                        Tab(
+                          text: translation(context).waiting,
+                        ),
+                        Tab(
+                          text: translation(context).approved,
+                        ),
+                        Tab(
+                          text: translation(context).rejected,
+                        ),
+                      ]),
+                ),
+              ),
+              preferredSize:const Size(double.infinity, 80)),
         ),
         body: Container(
           decoration: BoxDecoration(

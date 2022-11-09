@@ -36,40 +36,45 @@ class ReportsScreen extends StatelessWidget {
             preferredSize: const Size(double.infinity, 80),
             child: Container(
               height: 65,
+              width: double.infinity,
               decoration: const BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.vertical(
                     top: Radius.circular(25),
                   )),
-              child: TabBar(
-                labelPadding: const EdgeInsets.all(1),
-                labelStyle:const TextStyle(
-                  fontSize: 20
-                ),
-                // labelStyle:  TextStyle(
-                //   fontSize: 16,
-                // ),
-                automaticIndicatorColorAdjustment: false,
-                indicatorColor: AppColors.zzz,
-                tabs: <Widget>[
-                  Tab(
-                    text: translation(context).late,
-                    // child: Text(
-                    //   'في انتظار الموافقة',
-                    //   style: TextStyle(fontSize: 14,fontWeight: FontWeight.bold),
-                    // ),
+              child: Center(
+                child: TabBar(
+                  unselectedLabelColor: Colors.grey,
+                  labelStyle:const TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold
                   ),
-                  Tab(
-                    text: translation(context).behavior,
+                  isScrollable: true,
+                  // labelStyle:  TextStyle(
+                  //   fontSize: 16,
+                  // ),
+                  automaticIndicatorColorAdjustment: false,
+                  indicatorColor: AppColors.zzz,
+                  tabs: <Widget>[
+                    Tab(
+                      text: translation(context).late,
+                      // child: Text(
+                      //   'في انتظار الموافقة',
+                      //   style: TextStyle(fontSize: 14,fontWeight: FontWeight.bold),
+                      // ),
+                    ),
+                    Tab(
+                      text: translation(context).behavior,
 
-                  ),
-                  Tab(
-                    text: translation(context).absence,
-                  ),
-                  Tab(
-                    text: translation(context).bus,
-                  ),
-                ],
+                    ),
+                    Tab(
+                      text: translation(context).absence,
+                    ),
+                    Tab(
+                      text: translation(context).bus,
+                    ),
+                  ],
+                ),
               ),
             ),
           ),

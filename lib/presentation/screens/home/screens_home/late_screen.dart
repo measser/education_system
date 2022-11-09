@@ -27,7 +27,7 @@ class _LateScreenState extends State<LateScreen> {
           backgroundColor: Colors.indigo,
           title: translation(context).delays,
         ),
-        preferredSize: const Size(double.infinity, 64),
+        preferredSize: const Size(double.infinity, 80),
       ),
       drawer: drawerAll(),
       body: Container(
@@ -63,7 +63,7 @@ class _LateScreenState extends State<LateScreen> {
                       children: [
                         Text(
                           translation(context).number_of_delays,
-                          style: const TextStyle(fontSize: 18),
+                          style: const TextStyle(fontSize: 20),
                         ),
                         const SizedBox(width: 5,),
                         const CircleAvatar(
@@ -85,6 +85,7 @@ class _LateScreenState extends State<LateScreen> {
               child: ListView.builder(
                 physics:const BouncingScrollPhysics(),
                   itemBuilder: (context,index)=>ExpansionTile(
+
                     collapsedBackgroundColor: Colors.white,
                     initiallyExpanded: true,
                     collapsedIconColor: Colors.grey,

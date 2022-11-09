@@ -10,8 +10,16 @@ class SchoolSchedulesScreen extends StatelessWidget {
     return DefaultTabController(
       length: 6,
       child: Scaffold(
-        endDrawer: drawerAll(),
+        drawer: drawerAll(),
           appBar: AppBar(
+            actions: [
+              IconButton(
+                onPressed: () {
+                  Navigator.pop(context);
+                },
+                icon: const Icon(Icons.arrow_forward_ios_rounded),
+              ),
+            ],
             centerTitle: true,
             title: Text(
               translation(context).schedules,
@@ -65,7 +73,6 @@ class SchoolSchedulesScreen extends StatelessWidget {
               listSchedules(),
               listSchedules(),
               listSchedules(),
-
             ],
           )),
     );

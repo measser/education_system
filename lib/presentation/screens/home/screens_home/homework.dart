@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../../../app.dart';
+import '../../../../colors.dart';
 import '../../../../componants.dart';
 import '../home.dart';
 
@@ -11,16 +12,20 @@ class HomeWorkScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.indigo,
-      appBar: PreferredSize(
-        child: DefaultAppBar(
-          onPressed: () {
-            Navigator.pop(context);
-          },
-          backgroundColor: Colors.indigo,
-          title: translation(context).homework,
-        ),
-        preferredSize: const Size(double.infinity, 100),
+      backgroundColor: AppColors.zzz,
+      appBar:AppBar (
+        actions: [
+          IconButton(
+            onPressed: () {
+              Navigator.pop(context);
+            },
+            icon: const Icon(Icons.arrow_forward_ios_rounded),
+          ),
+        ],
+        elevation: 0.0,
+        toolbarHeight: 80,
+        title: Text(translation(context).homework),
+        centerTitle: true,
       ),
       drawer: drawerAll(),
       body: Container(
