@@ -1,12 +1,15 @@
+import 'package:education_system/presentation/screens/home/screens_home/schedules.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
-import '../../app.dart';
-import '../../colors.dart';
-import '../../componants.dart';
-import 'homework.dart';
-import 'permissions_screen.dart';
-import 'reports.dart';
+import '../../../app.dart';
+import '../../../colors.dart';
+import '../../../componants.dart';
+import 'screens_home/homework.dart';
+import 'screens_home/late_screen.dart';
+import 'screens_home/notifgation.dart';
+import 'screens_home/permissions_screen.dart';
+import 'screens_home/reports.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -15,14 +18,15 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.lightGreen,
-      appBar: const PreferredSize(
+      appBar:  PreferredSize(
         child: DefaultAppBar(
           icon: Icons.notification_add_outlined,
+          onPressed: (){
+            navigateTo(context,const NotifgationScreen());
+          },
         ),
-        preferredSize: Size(double.infinity, kToolbarHeight),
+        preferredSize:const Size(double.infinity, kToolbarHeight),
       ),
-
-
 
       drawer: drawerAll(),
       body: Column(
@@ -111,8 +115,11 @@ class HomeScreen extends StatelessWidget {
                             const Spacer(),
                             Activities(
                               color: AppColors.marvel,
-                              text: 'Home Work',
-                              nest: () {},
+                              text: translation(context).delays,
+                              nest: ()
+                              {
+                                navigateTo(context, LateScreen());
+                              },
                             ),
                           ],
                         ),
@@ -123,8 +130,10 @@ class HomeScreen extends StatelessWidget {
                           children: [
                             Activities(
                               color: AppColors.orange,
-                              text: 'Home Work',
-                              nest: () {},
+                              text: translation(context).schedules,
+                              nest: () {
+                                navigateTo(context,const SchoolSchedulesScreen());
+                                },
                             ),
                             const Spacer(),
                             Activities(

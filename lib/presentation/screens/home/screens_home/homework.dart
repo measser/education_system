@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
-import '../../app.dart';
-import '../../componants.dart';
-import 'home.dart';
+
+import '../../../../app.dart';
+import '../../../../componants.dart';
+import '../home.dart';
+
 
 class HomeWorkScreen extends StatelessWidget {
   const HomeWorkScreen({Key? key}) : super(key: key);

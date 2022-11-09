@@ -7,7 +7,7 @@ class AppThemes {
   appBarTheme: const AppBarTheme(
   foregroundColor: Colors.white,
   ),
-  fontFamily: 'Poppins',
+  //fontFamily: 'Poppins',
   listTileTheme: const ListTileThemeData(
   textColor: Colors.black,
   ),

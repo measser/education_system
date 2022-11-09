@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-import '../../app.dart';
-import '../../colors.dart';
-import '../../componants.dart';
+import '../../../../app.dart';
+import '../../../../colors.dart';
+import '../../../../componants.dart';
 
 
 class PermissionsScreen extends StatelessWidget {
@@ -42,8 +42,9 @@ class PermissionsScreen extends StatelessWidget {
                     top: Radius.circular(25),
                   )),
               child: TabBar(
-                labelStyle: const TextStyle(
-                  fontSize: 16,
+                labelPadding: const EdgeInsets.all(1),
+                labelStyle:const TextStyle(
+                    fontSize: 20
                 ),
                 automaticIndicatorColorAdjustment: false,
                 indicatorColor: AppColors.zzz,

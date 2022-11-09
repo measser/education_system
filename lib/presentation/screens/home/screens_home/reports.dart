@@ -1,10 +1,11 @@
 import 'package:education_system/app.dart';
-import 'package:education_system/presentation/screens/home.dart';
+import 'package:education_system/presentation/screens/home/home.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-import '../../colors.dart';
+import '../../../../colors.dart';
+import '../../../../componants.dart';
 
 class ReportsScreen extends StatelessWidget {
   const ReportsScreen({Key? key}) : super(key: key);
@@ -79,6 +80,7 @@ class ReportsScreen extends StatelessWidget {
             ),
           ), //
         ),
+        drawer: drawerAll(),
         body: Container(
           color: Colors.grey[200],
 

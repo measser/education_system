@@ -28,5 +28,11 @@
   "am":"am",
   "pm":"pm",
   "class_time":"Class time :",
-  "class_number":"Class number :"
+  "class_number":"Class number :",
+   "notification":"Notifications",
+   "delays":"Delays",
+   "number_of_delays":"Number of delays",
+   "schedules":"School schedules"
+
+
 }
